@@ -1,3 +1,6 @@
+# Bayesian Inference
+[Black Box Inference, AISTATS 2014](http://jmlr.org/proceedings/papers/v33/ranganath14.pdf)
+
 # Machine Teaching
 [Curriculum Learning, ICML 2009](http://ronan.collobert.com/pub/matos/2009_curriculum_icml.pdf)
 * Adding one more variable to the cost function which is easier to optimize than the other.
