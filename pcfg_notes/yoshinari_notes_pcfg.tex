@@ -1,0 +1,90 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsbsy}
+
+\begin{document}
+
+\section{Summary of what I did understand (or misunderstand)}
+Objective: We want to know $\theta$, a probability distribution over rewrite rules in PCFG, given the observed sentences $\boldsymbol{s}$ i.e. 
+$$
+P(\theta|\boldsymbol{s})
+$$
+
+
+Apply Bayesian framework:
+$$
+P(\theta|\boldsymbol{s}) \propto P(\boldsymbol{s}|\theta) P(\theta)
+$$
+
+Use Dirichlet prior on each $\theta_A$ (where $A$ is a non-terminal):
+$$
+\theta_A \sim Dirichlet(\alpha_A) 
+$$
+
+As a result of including Dirichlet prior, $\theta$ now depends on a hyper-parameter $\alpha$ of a Dirichlet distribution. Thus, the posterior distribution $P(\theta|\boldsymbol{s})$ can be rewritten as \cite{cohen-johnson:2013:ACL2013}:
+
+$$
+P(\theta|\boldsymbol{s}, \alpha) \propto P(\boldsymbol{s}|\theta) P(\theta | \alpha)
+$$
+
+
+Assume that $s$ is distributed as $Multinomial$ i.e. $\boldsymbol{s} \sim Multinomial(\theta)$. Then, the posterior $P(\theta|\boldsymbol{s})$ or $P(\theta|\boldsymbol{s}, \alpha)$ is also distributed as $Dirichlet$:
+$$
+\theta|\boldsymbol{s} \sim Dirichlet(f_{\boldsymbol{t}} + \alpha)
+$$
+where $f_{\boldsymbol{t}}$ is the vector of production counts in $\boldsymbol{t}$ indexed by $r \in R$ \cite{johnson-griffiths-goldwater:2007:main}.
+
+\section{Training Bayesian PCFG under supervised and unsupervised setting}
+
+Under supervised setting, since the data consists of parse trees $\boldsymbol{t}$ \cite{cohen-johnson:2013:ACL2013}, simply replace $\boldsymbol{s}$ by $\boldsymbol{t}$:
+$$
+P(\boldsymbol{s}|\theta) =  P(\boldsymbol{t}|\theta) = \prod_i P(t_i | \theta)
+$$
+
+Under unsupervised setting, since the data consists of sentences $\boldsymbol{s}$,
+$$
+P(\boldsymbol{s}|\theta) = \prod_i P(s_i | \theta) = \prod_i \sum_{t_i \in T: yeild(t_i) = s_i} P(t_i | \theta)
+$$
+
+% TODO: not fully understood this part yet
+%Moreover, the likelihood function becomes
+%$$
+%P(\boldsymbol{s}|\alpha) = \sum_t P(\boldsymbol{s}, t|\alpha) = \sum_t \int P(\boldsymbol{s}, t|\boldsymbol{\theta}) P(\boldsymbol{\theta}|\alpha) d\theta
+%$$
+
+
+
+Moreover, in unsupervised setting, we are also interested in knowing the parse trees $t$ for given sentences $s$. So the posterior $P(\theta|\boldsymbol{s}, \alpha)$ becomes:
+$$
+P(\theta|\boldsymbol{s}, \alpha) = \sum_{\boldsymbol{t}} P(\boldsymbol{t}, \theta | \boldsymbol{s}, \alpha) 
+$$
+
+In conlcusion, the main problem under Bayesian framework using Dirichlet prior with hyper-parameter $\alpha$ is to compute the posterior $P(\boldsymbol{t}, \theta | \boldsymbol{s}, \alpha)$.
+
+\section{Key Features}
+\begin{enumerate}
+ \item PCFG
+ \item Bayesian Framework
+ \item Variational Bayes, Gibbs sampling, particle filter
+ \item Unsupervised (parse trees not observed)
+\end{enumerate}
+
+\section{Misc. Notes}
+In a supervised setting, a tree $t$ and a sentence $s$ are both observable.
+
+\section{Future Studies}
+\begin{enumerate}
+ \item Read \cite{beal2003variational} and \cite{kurihara2004application}.
+ \item Variational Inference, Gibbs samping, and particle filter in gerneal.
+ \item Start from assuming that the parse trees $\boldsymbol{t}$ are observed. Then, study about the Bayesian framework applied to PCFG.
+ \item Review the NLP lectures by Chris Manning on Coursera
+\end{enumerate}
+
+
+
+
+\bibliographystyle{plain}
+\bibliography{yoshinari_notes_pcfg}
+
+\end{document}
+
