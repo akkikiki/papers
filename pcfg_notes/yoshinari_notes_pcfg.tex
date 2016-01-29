@@ -3,6 +3,8 @@
 \usepackage{amsbsy}
 \usepackage{url}
 
+\newcommand{\argmax}{\mathop{\rm arg~max}\limits}
+
 \begin{document}
 
 \section{Summary of what I did understand (or misunderstand)}
@@ -64,7 +66,20 @@ In conclusion, under both unsupervised setting with Bayesian framework, our obje
 
 \section{Marginal Likelihood vs. Joint likelihoood}
 
-Marginal likelihood is used when training data is unlabeled \cite{joint_vs_marginal}.
+With labeled data $D = \{x_i, y_i\}$, the joint likelihood \cite{joint_vs_marginal} is
+$$
+\argmax_{\theta} \prod^n_{i = 1} P(y_i|\theta) P(x_i|y_i, \theta).
+$$
+
+With unlabeled data $D = \{x_i\}$, the marginal likelihood \cite{joint_vs_marginal} is
+$$
+\argmax_{\theta} \prod^n_{i = 1} \sum_{y \in \Omega_Y}P(y|\theta) P(x_i|y, \theta).
+$$
+which need to compute every way of filling in the missing labels $y$ \cite{mlss09}.
+
+
+Marginal likelihood is used when training data is unlabeled \cite{joint_vs_marginal} (Cited slides use HMM as an example). 
+With unlabeled training data, we maximized the marginal likelihood of the input. In HMM case, the parameters $\boldsymbol{\theta}$ are transition probabilities $A$, emission probabilities $\phi$, and probability of being an initial state $\pi$ \cite{hmm_parameters}. In \cite{joint_vs_marginal}, the parameters $\boldsymbol{\theta}$ is a bit unclear so let me clarify. Transition probabilities can be computed using state sequence $\boldsymbol{y}$ alone. Thereore, $P(y_i|\theta)$ or $P(y_i|A, \pi)$ is the transition probability. Emission probabilites can be computed the observed sequence and the state sequence $\boldsymbol{x}$ and $\boldsymbol{x}$. Therefore, $P(x_i|y_i,\theta)$ or $P(x_i|y_i, \phi)$ is the emission probability. 
 
 \section{Key Features}
 \begin{enumerate}
@@ -76,6 +91,7 @@ Marginal likelihood is used when training data is unlabeled \cite{joint_vs_margi
 
 \section{Misc. Notes}
 In a supervised setting, a tree $t$ and a sentence $s$ are both observable.
+
 
 \section{Future Studies}
 \begin{enumerate}
