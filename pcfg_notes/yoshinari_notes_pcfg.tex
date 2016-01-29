@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage[letterpaper,margin=1in]{geometry}
 \usepackage{amsbsy}
+\usepackage{url}
 
 \begin{document}
 
@@ -60,6 +61,10 @@ P(\theta|\boldsymbol{s}, \alpha) = \sum_{\boldsymbol{t}} P(\boldsymbol{t}, \thet
 $$
 
 In conclusion, under both unsupervised setting with Bayesian framework, our objective is to compute the posterior $P(\boldsymbol{t}, \theta | \boldsymbol{s}, \alpha)$ using Dirichlet prior with hyper-parameter $\alpha$.
+
+\section{Marginal Likelihood vs. Joint likelihoood}
+
+Marginal likelihood is used when training data is unlabeled \cite{joint_vs_marginal}.
 
 \section{Key Features}
 \begin{enumerate}
