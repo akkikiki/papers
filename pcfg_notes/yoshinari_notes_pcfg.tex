@@ -87,7 +87,10 @@ $$
 %Marginal likelihood is used when training data is unlabeled \cite{joint_vs_marginal} (Cited slides use HMM as an example). 
 %With unlabeled training data, we maximized the marginal likelihood of the input. In HMM case, the parameters $\boldsymbol{\theta}$ are transition probabilities $A$, emission probabilities $\phi$, and probability of being an initial state $\pi$ \cite{hmm_parameters}. In \cite{joint_vs_marginal}, the parameters $\boldsymbol{\theta}$ is a bit unclear so let me clarify. Transition probabilities can be computed using state sequence $\boldsymbol{y}$ alone. Therefore, $P(y_i|\theta)$ or $P(y_i|A, \pi)$ is the transition probability. Emission probabilities can be computed the observed sequence and the state sequence $\boldsymbol{x}$ and $\boldsymbol{x}$. Therefore, $P(x_i|y_i,\theta)$ or $P(x_i|y_i, \phi)$ is the emission probability. 
 
-\subsection{Why Marginal Likelihood in Bayesian Framework?}
+\subsection{Why Marginal Likelihood?}
+Since outputs (= labels) are not given in latent variable models \cite{liang_jordan_klein}, we cannot compute the joint likelihood of inputs and outputs. Therefore, we would like to compute the marginal likelihood (by summing over all outputs for a given input) \cite{pcfg_marginal}. If we are using EM to learn the rule probabilities, then it attempts to maximize the marginal likehood of inputs \cite{pcfg_marginal}.
+
+Note that marginal likelihood can appear in either Bayesian framework or non-Bayesian framework.
 
 \section{Summary of Parameter Learning \cite{mlss09}}
 
