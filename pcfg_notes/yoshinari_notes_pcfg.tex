@@ -7,14 +7,28 @@
 
 \begin{document}
 
-\section{Summary of what I did understand (or misunderstand)}
-Objective: We want to know $\theta$, a probability distribution over rewrite rules in PCFG, given the observed sentences $\boldsymbol{s}$ i.e. 
+\section{List of Important Terminologies}
+\begin{enumerate}
+ \item Marginal likelihood $P(s|\alpha)$, under Bayesian framework, parameter $\theta$ being marginalized out.
+ \item Posterior distribution $P(\theta,t|s,\alpha)$ 
+\end{enumerate}
+
+\section{Starting from MLE over Hidden Parse Trees}
+Objective: We want to learn an optimal $\theta$, a probability distribution over rewrite rules in PCFG, given observed sentences $\boldsymbol{s}$ i.e. 
 $$
-P(\theta|\boldsymbol{s})
+\argmax_{\theta} P(\boldsymbol{s}, t|\theta)
 $$
+where parse trees $t$ are hidden. How do we do that? Let's start from not considering Bayesian framework. One approach is to use maximum likelihood estimation over hidden parse trees. We will try to learn $\theta$ that maximizes the marginal likelihood $P(s|\theta) = \sum_t P(s, t|\theta)$ with EM algorithm (known as ``inside-outside algorithm'').
+\begin{enumerate}
+ \item Predict the parse trees given $\theta$ \cite{learning_tree_annotation}.
+ \item Maximize $\theta$ \cite{learning_tree_annotation}.
+ \item Repeat 1. and 2. till convergence.
+\end{enumerate}
 
 
-Apply Bayesian framework:
+\section{Applying Bayesian Framework over Hidden Parse Trees}
+% TODO: clean this section up.
+Then, let's considering applying Bayesian framework:
 $$
 P(\theta|\boldsymbol{s}) \propto P(\boldsymbol{s}|\theta) P(\theta)
 $$
@@ -44,7 +58,7 @@ $$
 P(\boldsymbol{s}|\theta) =  P(\boldsymbol{t}|\theta) = \prod_i P(t_i | \theta)
 $$
 
-Under unsupervised setting, since the data consists of sentences $\boldsymbol{s}$,
+Under unsupervised setting, we regard the parse tree $t$ as a latent variable, $theta$ as a parameter. Since the data consists of sentences $\boldsymbol{s}$,
 $$
 P(\boldsymbol{s}|\theta) = \prod_i P(s_i | \theta) = \prod_i \sum_{t_i \in T: yield(t_i) = s_i} P(t_i | \theta)
 $$
@@ -99,11 +113,14 @@ Here, we assume that the prior is dirichlet distribution, likelihood is multinom
 \begin{center}
     \begin{tabular}{|l|l|l|}
     \hline
-             & labeled data                    & unlabeled data  \\\hline
-    ML       & frequency                       & EM              \\\hline
-    Bayesian & updated Dirichlet distribution  & MCMC/VB         \\\hline
+             & labeled data (=Parse trees known) & unlabeled data (= Parse trees unknown)  \\\hline
+    ML       & frequency                         & EM              \\\hline
+    Bayesian & updated Dirichlet distribution    & MCMC/VB         \\\hline
     \end{tabular}
 \end{center}
+
+\section{Do you understand the difference between MAP and Bayesian approach?}
+``Both ML and MAP return only single and specific values for the parameter $\theta$. Bayesian estimation, by contrast, calculates fully the posterior distribution $P(\theta|X)$.'' \cite{map_vs_bayesian}.
 
 \section{Key Features}
 \begin{enumerate}
@@ -122,8 +139,8 @@ In a supervised setting, a tree $t$ and a sentence $s$ are both observable.
  \item Read \cite{beal2003variational} and \cite{kurihara2004application}.
  \item Variational Inference, Gibbs sampling, and particle filter in general.
  \item Start from assuming that the parse trees $\boldsymbol{t}$ are observed. Then, study about the Bayesian framework applied to PCFG.
- \item Review the NLP lectures by Chris Manning on Coursera
- \item What is marginal likelihood?
+ \item Review the NLP lectures by Chris Manning on Coursera (Assignment PDFs are available at http://www.mohamedaly.info/teaching/cmp-462-spring-2013)
+ \item Why marginal likelihood is important when we want to estimate the posterior using Variational Bayes?
 \end{enumerate}
 
 
