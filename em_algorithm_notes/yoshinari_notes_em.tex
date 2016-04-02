@@ -7,13 +7,31 @@
 
 \begin{document}
 
+This note explains essential stuff to understand a Naive Bayes classifier trained with both labeled data and unlabeled data \cite{nigam2000text}.
+
+
 \section{List of Important Terminologies}
 \begin{enumerate}
- \item Q funtion of a EM algorithm $$\sum_{d \in D} \sum_{c \in C} P(c|d; \theta) \log P(c, d; \theta)$$
+ \item Q funtion of an EM algorithm is either of the following:
+$$\sum_{d \in D} \sum_{c \in C} P(c|d; \theta) \log P(c, d; \theta)$$
+$$\sum_{d \in D} E_{P(c|d; \theta)}[ \log P(c, d; \theta)]$$
+ \item The objective function of a Naive Bayes classifier when conducting a maximum a posteriori estimation 
+$$\log P(\theta) + \log P(D)$$
 \end{enumerate}
 
+\section{Notes}
+\begin{enumerate}
+ \item Since we want to handle probabilities, the constraint $\sum_{c} p_c = 1$ is set. Therefore, we want to optimize using the method of Lagrange multiplier.
+ \item Assume that the data likelihood when incorporating both labeled data and unlabeled data is
+$$\log P(D^{l})P(D^{u}) =\log P(D^{l}) + \log P(D^{u})$$
+As a result, the objective function of a Naive Bayes classifier becomes 
+$$\log P(\theta) + \log P(D^{l}) + \log P(D^{u})$$
+\end{enumerate}
+
+ 
+
 \bibliographystyle{plain}
-\bibliography{yoshinari_notes_pcfg}
+\bibliography{yoshinari_notes_em}
 
 \end{document}
 
