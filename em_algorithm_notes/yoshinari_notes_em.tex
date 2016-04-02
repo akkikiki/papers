@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage[letterpaper,margin=1in]{geometry}
 \usepackage{amsbsy}
+\usepackage{amsmath}
 \usepackage{url}
 
 \newcommand{\argmax}{\mathop{\rm arg~max}\limits}
@@ -17,6 +18,8 @@ $$\sum_{d \in D} \sum_{c \in C} P(c|d; \theta) \log P(c, d; \theta)$$
 $$\sum_{d \in D} E_{P(c|d; \theta)}[ \log P(c, d; \theta)]$$
  \item The objective function of a Naive Bayes classifier when conducting a maximum a posteriori estimation 
 $$\log P(\theta) + \log P(D)$$
+\item Let $q_{w,c}$ be a probability that a word $w$ is chosen given class $c$ i.e.
+$$q_{w,c} = P(W = w | C = c)$$
 \end{enumerate}
 
 \section{Notes}
@@ -25,7 +28,16 @@ $$\log P(\theta) + \log P(D)$$
  \item Assume that the data likelihood when incorporating both labeled data and unlabeled data is
 $$\log P(D^{l})P(D^{u}) =\log P(D^{l}) + \log P(D^{u})$$
 As a result, the objective function of a Naive Bayes classifier becomes 
-$$\log P(\theta) + \log P(D^{l}) + \log P(D^{u})$$
+\begin{equation*}
+\begin{aligned}
+& \underset{\theta}{\text{maximize}}
+& & \log P(\theta) + \log P(D^{l}) + \log P(D^{u}) \\
+& \text{subject to}
+& & \sum_{c \in C} p_c = 1 \\
+& 
+& & \sum_{w} q_{w,c} = \sum_{w} P(W = w | C = c) = 1
+\end{aligned}
+\end{equation*}
 \end{enumerate}
 
  
