@@ -8,7 +8,7 @@
 
 \begin{document}
 
-This note explains essential stuff to understand a Naive Bayes classifier trained with both labeled data and unlabeled data \cite{nigam2000text}.
+This note explains essential stuff to understand a Naive Bayes classifier trained with both labeled data and unlabeled data \cite{nigam2000text,Takamura2010}.
 
 
 \section{List of Important Terminologies}
@@ -22,10 +22,31 @@ $$\log P(\theta) + \log P(D)$$
 $$q_{w,c} = P(W = w | C = c)$$
 \end{enumerate}
 
+
+\section{Naive Bayes}
+Naive Bayes models 
+
+$C$: a class of document e.g. positive/negative
+
+$D$: a document
+
+We want to know the class $C$ of a document $D$ by calcualting the following term:
+
+$$C' = \argmax_{C} P(C|D)$$
+
+The model tries to calculate
+$$P(C|D) \propto P(C) P(D|C)$$
+
+So now, we want to know $P(C)$ and $P(D|C)$.
+
+Assumes that a word $w$ occur independently within a document given a class.
+
+$$P(D|C) = \prod_{w \in D} P(w|C)$$
+
 \section{Notes}
 \begin{enumerate}
  \item Since we want to handle probabilities, the constraint $\sum_{c} p_c = 1$ is set. Therefore, we want to optimize using the method of Lagrange multiplier.
- \item Assume that the data likelihood when incorporating both labeled data and unlabeled data is
+ \item Assume that the data likelihood when incorporating both labeled data and unlabeled data is \cite{Takamura2010}
 $$\log P(D^{l})P(D^{u}) =\log P(D^{l}) + \log P(D^{u})$$
 As a result, the objective function of a Naive Bayes classifier becomes 
 \begin{equation*}
