@@ -4,6 +4,11 @@
 * Takes 3 days to train on PKU dataset using CPU without any optimization.
 * A code implemented by another person is [here](https://github.com/dalstonChen/CWS_LSTM) but I have not checked if this implementation is correct or not.
 
+[Structured Training for Neural Network Transition-Based Parsing, ACL 2015](http://www.petrovi.de/data/acl15.pdf)
+- Making use of unlabeled data
+- “tri-traiing”: using three different parsers and use the sentences for which two parsers output the same  result (Ambiguity-aware ensemble training for semisupervised dependency parsing, ACL 2014)
+- NN-based parsing compared to other approaches
+
 # Topic Models
 [Sparse Additive Generative Models of Text, ICML 2011](http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Eisenstein_534.pdf)
 * Require less variables. (E.g. switching variables in topic-perspective models in Ahmed & Xing 2010)
