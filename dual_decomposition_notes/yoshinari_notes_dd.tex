@@ -8,7 +8,32 @@
 
 \begin{document}
 
-This note explains essential stuff to understand dual decomposition.
+This note explains essential stuff to understand dual decomposition explained in \cite{pfi_dual_decomposition}. 
+See \cite{Rush_2012_tutorial} for the full tutorial.
+
+\section{Important Terminologies}
+\begin{enumerate}
+ \item Subderivative (劣微分), subgradient (劣勾配)
+ \item belief propagation (BP)
+\end{enumerate}
+
+\section{Main Points}
+\begin{enumerate}
+ \item Typically simple and efficient \cite{Rush_2012_tutorial}.
+ \item Many decoding problems can be decomposed into two or more subproblems \cite{Rush_2012_tutorial}.
+\end{enumerate}
+
+\begin{equation*}
+\begin{aligned}
+& \underset{\theta}{\text{maximize}}
+& & f(z) + h(y) \\
+& \text{subject to}
+& & y = z \\
+\end{aligned}
+\end{equation*}
+
+\bibliographystyle{plain}
+\bibliography{yoshinari_notes_dd}
 
 \end{document}
 
