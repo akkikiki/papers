@@ -16,3 +16,7 @@
 # Topic Models
 [Sparse Additive Generative Models of Text, ICML 2011](http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Eisenstein_534.pdf)
 * Require less variables. (E.g. switching variables in topic-perspective models in Ahmed & Xing 2010)
+
+# Websites/Blogs
+* [2016 Paper Selection](http://anie.me/paper-compose-2016/)
+* [Arxiv Sanity Preserver](http://www.arxiv-sanity.com/)
