@@ -17,10 +17,20 @@
 * Dealing with unknown/rare words.
 * "implement the copy-mechanism" ([A Neural Knowledge Language Model, (submitted to?)NIPS 2016](http://arxiv.org/pdf/1608.00318v1.pdf))
 
+# Autoencoders
+[Pixel Recurrent Neural Networks, ICML 2016](https://arxiv.org/pdf/1601.06759v2.pdf)
+* [Slides in Japanese](http://www.slideshare.net/beam2d/pixel-recurrent-neural-networks) created by Seiya Tokui
+* "to cast it as a product of conditional distributions": autoregressive models 
+
+# Word/Character Embeddings
+[Charagram: Embedding Words and Sentences via Character n-grams, EMNLP 2016](https://arxiv.org/pdf/1607.02789v1.pdf)
+* Comment: Does it still uses the distributional hypothesis?
+
 # Topic Models
 [Sparse Additive Generative Models of Text, ICML 2011](http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Eisenstein_534.pdf)
 * Require less variables. (E.g. switching variables in topic-perspective models in Ahmed & Xing 2010)
 
-# Websites/Blogs
+# Websites/Blogs/Survey Slides
 * [2016 Paper Selection](http://anie.me/paper-compose-2016/)
 * [Arxiv Sanity Preserver](http://www.arxiv-sanity.com/)
+* [Recent Progress in RNN and NLP](http://www.slideshare.net/hytae/recent-progress-in-rnn-and-nlp-63762080)
