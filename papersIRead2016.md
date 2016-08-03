@@ -29,6 +29,13 @@
 [Charagram: Embedding Words and Sentences via Character n-grams, EMNLP 2016](https://arxiv.org/pdf/1607.02789v1.pdf)
 * Comment: Does it still uses the distributional hypothesis?
 
+[Learning the Curriculum with Bayesian Optimization for Task-Specific Word Representation Learning](http://aclweb.org/anthology/P/P16/P16-1013.pdf)
+* curriculum learning
+* How do you define a “complexity” of training data?
+   * length of training sentences (Spitkovsky et al., 2010)
+   * frequency of a word (Bengio et al., 2009)
+* "we search for an optimal curriculum using Bayesian optimization"
+
 # Topic Models
 [Sparse Additive Generative Models of Text, ICML 2011](http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Eisenstein_534.pdf)
 * Require less variables. (E.g. switching variables in topic-perspective models in Ahmed & Xing 2010)
