@@ -35,6 +35,10 @@
    * length of training sentences (Spitkovsky et al., 2010)
    * frequency of a word (Bengio et al., 2009)
 * "we search for an optimal curriculum using Bayesian optimization"
+* Bayesian optimization:
+   * approximate objective functions using a "surrogate model"
+   * acquisition function
+      * estimating the next set of parameters to explore
 
 # Topic Models
 [Sparse Additive Generative Models of Text, ICML 2011](http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Eisenstein_534.pdf)
