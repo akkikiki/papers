@@ -32,7 +32,7 @@
 1. [Learning the Curriculum with Bayesian Optimization for Task-Specific Word Representation Learning](http://aclweb.org/anthology/P/P16/P16-1013.pdf)
  * curriculum learning
  * How do you define a “complexity” of training data?
-     * length of training sentences (Spitkovsky et al., 2010)
+     * length of training sentences for grammar induction ([Spitkovsky et al., NAACL 2010](http://www.aclweb.org/anthology/N/N10/N10-1116.pdf))
      * frequency of a word (Bengio et al., 2009)
  * "we search for an optimal curriculum using Bayesian optimization"
  * Bayesian optimization:
@@ -43,6 +43,13 @@
 # Topic Models
 1. [Sparse Additive Generative Models of Text, ICML 2011](http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Eisenstein_534.pdf)
  * Require less variables. (E.g. switching variables in topic-perspective models in Ahmed & Xing 2010)
+
+# Topic Models and Word Embeddings
+1. [Nonparametric Spherical Topic Modeling with Word Embeddings, ACL 2016](http://aclweb.org/anthology/P/P16/P16-2087.pdf)
+ * Cosine similarity and von Mises-Fisher distribution
+
+# Others
+1. [Generating Natural Language Descriptions for Semantic Representations of Human Brain Activity](http://aclweb.org/anthology/P/P16/P16-3004.pdf)
 
 # Websites/Blogs/Survey Slides
 * [2016 Paper Selection](http://anie.me/paper-compose-2016/)
