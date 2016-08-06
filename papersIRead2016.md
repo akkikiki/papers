@@ -36,6 +36,9 @@ I need to spend more time to understand and think deeply about these papers.
  * Uses bidirectional GRU
  * Dealing with rare/unknown words by character n-grams
 
+1. [Enriching Word Vectors with Subword Information, ArXiv preprint 2016](https://arxiv.org/pdf/1607.04606v1.pdf)
+ * Its implementation can be found at [fastText](https://github.com/facebookresearch/fastText)
+
 # Topic Models
 1. [Sparse Additive Generative Models of Text, ICML 2011](http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Eisenstein_534.pdf)
  * Require less variables. (E.g. switching variables in topic-perspective models in Ahmed & Xing 2010)
