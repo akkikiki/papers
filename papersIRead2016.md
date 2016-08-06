@@ -31,6 +31,17 @@ I need to spend more time to understand and think deeply about these papers.
 1. [Charagram: Embedding Words and Sentences via Character n-grams, EMNLP 2016](https://arxiv.org/pdf/1607.02789v1.pdf)
  * Comment: Does it still uses the distributional hypothesis?
 
+# Topic Models
+1. [Sparse Additive Generative Models of Text, ICML 2011](http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Eisenstein_534.pdf)
+ * Require less variables. (E.g. switching variables in topic-perspective models in Ahmed & Xing 2010)
+
+# Topic Models and Word Embeddings
+1. [Nonparametric Spherical Topic Modeling with Word Embeddings, ACL 2016](http://aclweb.org/anthology/P/P16/P16-2087.pdf)
+ * Cosine similarity and von Mises-Fisher distribution (Incorporates directional statistics)
+
+2. [A Latent Concept Topic Model for Robust Topic Inference Using Word Embeddings](http://aclweb.org/anthology/P/P16/P16-2062.pdf)
+
+# Curriculum Learning
 1. [Learning the Curriculum with Bayesian Optimization for Task-Specific Word Representation Learning](http://aclweb.org/anthology/P/P16/P16-1013.pdf)
  * curriculum learning
  * How do you define a “complexity” of training data?
@@ -42,26 +53,26 @@ I need to spend more time to understand and think deeply about these papers.
      * acquisition function
         * estimating the next set of parameters to explore
 
-# Topic Models
-1. [Sparse Additive Generative Models of Text, ICML 2011](http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Eisenstein_534.pdf)
- * Require less variables. (E.g. switching variables in topic-perspective models in Ahmed & Xing 2010)
+1. [From Baby Steps to Leapfrog: How “Less is More” in Unsupervised Dependency Parsing, NAACL 2010](http://www.aclweb.org/anthology/N/N10/N10-1116.pdf)
 
-# Topic Models and Word Embeddings
-1. [Nonparametric Spherical Topic Modeling with Word Embeddings, ACL 2016](http://aclweb.org/anthology/P/P16/P16-2087.pdf)
- * Cosine similarity and von Mises-Fisher distribution (Incorporates directional statistics)
-
-2. [A Latent Concept Topic Model for Robust Topic Inference Using Word Embeddings](http://aclweb.org/anthology/P/P16/P16-2062.pdf)
 
 # Short texts
 1. [Semi-supervised Clustering for Short Text via Deep Representation Learning, CoNLL 2016](http://aclweb.org/anthology/K/K16/K16-1004.pdf) 
  * Clustering algorithms often suffer from small number of unique words in short text.
 
 # Interpretability
-1. [“Why Should I Trust You?” Explaining the Predictions of Any Classifier](http://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf)
+1. [“Why Should I Trust You?” Explaining the Predictions of Any Classifier, KDD 2016](http://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf)
  * Figure 4 is a very good demonstration of the proposed method.
+
+# Cross-lingual projection
+1. [Learning when to trust distant supervision: An application to low-resource POS tagging using cross-lingual projection, CoNLL 2016](http://aclweb.org/anthology/K/K16/K16-1018.pdf)
+
+1. [Cross-lingual projection for class-based language models, ACL 2016](http://www.aclweb.org/anthology/P/P16/P16-2014.pdf)
 
 # Others
 1. [Generating Natural Language Descriptions for Semantic Representations of Human Brain Activity](http://aclweb.org/anthology/P/P16/P16-3004.pdf)
+
+1. [Mixture Modeling of Individual Learning Curves, EDM 2015](http://www.educationaldatamining.org/EDM2015/uploads/papers/paper_133.pdf)
 
 # Websites/Blogs/Survey Slides
 * [2016 Paper Selection](http://anie.me/paper-compose-2016/)
