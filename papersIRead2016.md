@@ -1,3 +1,5 @@
+I need to spend more time to understand and think deeply about these papers.
+
 # Deep Learning
 1. [Long Short-Term Meomory Neural Networks, EMNLP 2015](http://www.emnlp2015.org/proceedings/EMNLP/pdf/EMNLP141.pdf)
  * Uses 3 NNs 1) character embeddings, 2) LSTM, and 3) tag inference.
@@ -46,7 +48,17 @@
 
 # Topic Models and Word Embeddings
 1. [Nonparametric Spherical Topic Modeling with Word Embeddings, ACL 2016](http://aclweb.org/anthology/P/P16/P16-2087.pdf)
- * Cosine similarity and von Mises-Fisher distribution
+ * Cosine similarity and von Mises-Fisher distribution (Incorporates directional statistics)
+
+2. [A Latent Concept Topic Model for Robust Topic Inference Using Word Embeddings](http://aclweb.org/anthology/P/P16/P16-2062.pdf)
+
+# Short texts
+1. [Semi-supervised Clustering for Short Text via Deep Representation Learning, CoNLL 2016](http://aclweb.org/anthology/K/K16/K16-1004.pdf) 
+ * Clustering algorithms often suffer from small number of unique words in short text.
+
+# Interpretability
+1. [“Why Should I Trust You?” Explaining the Predictions of Any Classifier](http://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf)
+ * Figure 4 is a very good demonstration of the proposed method.
 
 # Others
 1. [Generating Natural Language Descriptions for Semantic Representations of Human Brain Activity](http://aclweb.org/anthology/P/P16/P16-3004.pdf)
