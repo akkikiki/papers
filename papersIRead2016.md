@@ -31,6 +31,11 @@ I need to spend more time to understand and think deeply about these papers.
 1. [Charagram: Embedding Words and Sentences via Character n-grams, EMNLP 2016](https://arxiv.org/pdf/1607.02789v1.pdf)
  * Comment: Does it still uses the distributional hypothesis?
 
+1. [Tweet2Vec: Character-Based Distributed Representations for Social Media, ACL 2016](http://aclweb.org/anthology/P/P16/P16-2044.pdf)
+ * Very interesting.
+ * Uses bidirectional GRU
+ * Dealing with rare/unknown words by character n-grams
+
 # Topic Models
 1. [Sparse Additive Generative Models of Text, ICML 2011](http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Eisenstein_534.pdf)
  * Require less variables. (E.g. switching variables in topic-perspective models in Ahmed & Xing 2010)
@@ -78,3 +83,4 @@ I need to spend more time to understand and think deeply about these papers.
 * [2016 Paper Selection](http://anie.me/paper-compose-2016/)
 * [Arxiv Sanity Preserver](http://www.arxiv-sanity.com/)
 * [Recent Progress in RNN and NLP](http://www.slideshare.net/hytae/recent-progress-in-rnn-and-nlp-63762080)
+ * Slides made by Sosuke Kobayashi
