@@ -39,6 +39,11 @@ I need to spend more time to understand and think deeply about these papers.
 1. [Enriching Word Vectors with Subword Information, ArXiv preprint 2016](https://arxiv.org/pdf/1607.04606v1.pdf)
  * Its implementation can be found at [fastText](https://github.com/facebookresearch/fastText)
 
+1. [Character-Aware Neural Language Models, AAAI 2016](https://arxiv.org/abs/1508.06615)
+
+1. [RAND-WALK: A Latent Variable Model Approach to Word Embeddings, TACL 2016](https://arxiv.org/abs/1502.03520)
+* Proposes a new generative model
+
 # Topic Models
 1. [Sparse Additive Generative Models of Text, ICML 2011](http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Eisenstein_534.pdf)
  * Require less variables. (E.g. switching variables in topic-perspective models in Ahmed & Xing 2010)
