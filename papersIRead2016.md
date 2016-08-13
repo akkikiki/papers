@@ -82,6 +82,8 @@ I need to spend more time to understand and think deeply about these papers.
 
 1. [Cross-lingual projection for class-based language models, ACL 2016](http://www.aclweb.org/anthology/P/P16/P16-2014.pdf)
 
+1. [Towards cross-lingual distributed representations without parallel text trained with adversarial autoencoders, 2016 arXiv preprint](http://arxiv.org/pdf/1608.02996v1.pdf)
+
 # Others
 1. [Generating Natural Language Descriptions for Semantic Representations of Human Brain Activity](http://aclweb.org/anthology/P/P16/P16-3004.pdf)
 
@@ -92,3 +94,5 @@ I need to spend more time to understand and think deeply about these papers.
 * [Arxiv Sanity Preserver](http://www.arxiv-sanity.com/)
 * [Recent Progress in RNN and NLP](http://www.slideshare.net/hytae/recent-progress-in-rnn-and-nlp-63762080)
  * Slides made by Sosuke Kobayashi
+* [karpathy's notes on Google's wikireading paper](https://github.com/karpathy/paper-notes/blob/master/wikireading.md)
+* [A Beginner's Guide to Variational Methods: Mean-Field Approximation](http://blog.evjang.com/2016/08/variational-bayes.html)

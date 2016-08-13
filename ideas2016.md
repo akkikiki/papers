@@ -1,7 +1,7 @@
 Some initial ideas for my research topic.
 
 # Curriculum Learning
-* The advantage of learning "learning easier data first"
+* The advantage of "learning easier data first" for humans is that the more difficult training data can be induced from the easier data. However, is the success of the curriculum learning based on this kind of induction or is it something else? Simply based on empirical positive results?
 
 # NLP for short texts
 * Text understanding on short texts requires more “context” somehow.
