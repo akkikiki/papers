@@ -44,15 +44,20 @@ I need to spend more time to understand and think deeply about these papers.
 1. [Character-Aware Neural Language Models, AAAI 2016](https://arxiv.org/abs/1508.06615)
 
 1. [RAND-WALK: A Latent Variable Model Approach to Word Embeddings, TACL 2016](https://arxiv.org/abs/1502.03520)
-* Proposes a new generative model
+ * Proposes a new generative model
 
 1. [Multi-Task Cross-Lingual Sequence Tagging from Scratch, arXiv 2016](http://arxiv.org/pdf/1603.06270v2.pdf)
-* Also mentioned in [Learning Deep Generative Models @ Deep Learning Summer School](http://www.cs.toronto.edu/~rsalakhu/talk_Montreal_2016_Salakhutdinov.pdf)
+ * Also mentioned in [Learning Deep Generative Models @ Deep Learning Summer School](http://www.cs.toronto.edu/~rsalakhu/talk_Montreal_2016_Salakhutdinov.pdf)
  * "Using both word-level and character-level RNNs"
 
 # Topic Models
 1. [Sparse Additive Generative Models of Text, ICML 2011](http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Eisenstein_534.pdf)
  * Require less variables. (E.g. switching variables in topic-perspective models in Ahmed & Xing 2010)
+
+1. [Comparing Apples to Apple: The Effects of Stemmers on Topic Models, TACL 2016](http://aclweb.org/anthology/Q/Q16/Q16-1021.pdf)
+ * rule-based stemmers and context-based methods
+ * "Topic modeling is sensitive to preprocessing because of its dependence on a sparse vocabulary (Jockers and Mimno, 2013)"
+ * LDA is in question and no other topic models are out of scope
 
 # Topic Models and Word Embeddings
 1. [Nonparametric Spherical Topic Modeling with Word Embeddings, ACL 2016](http://aclweb.org/anthology/P/P16/P16-2087.pdf)
