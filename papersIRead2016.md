@@ -104,3 +104,4 @@ I need to spend more time to understand and think deeply about these papers.
 * [karpathy's notes on Google's wikireading paper](https://github.com/karpathy/paper-notes/blob/master/wikireading.md)
 * [A Beginner's Guide to Variational Methods: Mean-Field Approximation](http://blog.evjang.com/2016/08/variational-bayes.html)
 * [How to be a successful PhD](https://people.cs.umass.edu/~wallach/how_to_be_a_successful_phd_student.pdf)
+* [Hal's blog post about ACL 2016](http://nlpers.blogspot.com/2016/08/some-papers-i-liked-at-acl-2016.html)
