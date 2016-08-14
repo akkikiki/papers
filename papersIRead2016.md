@@ -92,6 +92,7 @@ I need to spend more time to understand and think deeply about these papers.
 
 # Others
 1. [Generating Natural Language Descriptions for Semantic Representations of Human Brain Activity, ACL 2016](http://aclweb.org/anthology/P/P16/P16-3004.pdf)
+* "Nishida et al.(2015) demonstrated that skip-gram, employed in the framework of word2vec proposed by Mikolov (2013), is a more appropriate model than the conventional statistical models used for the quantitative analysis of semantic representation in human brain activity under the same experimental settings as the prior studies."
 
 1. [Mixture Modeling of Individual Learning Curves, EDM 2015](http://www.educationaldatamining.org/EDM2015/uploads/papers/paper_133.pdf)
 
