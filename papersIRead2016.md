@@ -22,6 +22,8 @@ I need to spend more time to understand and think deeply about these papers.
 1. [BlackOut: Speeding up Recurrent Neural Network Language Models With Very Large Vocabularies, ICLR 2016](http://arxiv.org/pdf/1511.06909v7.pdf)
  * Similar to negative sampling
 
+1. [Generating Images from Captions with Attention, ICLR 2016](https://arxiv.org/pdf/1511.02793v2.pdf)
+
 # Autoencoders
 1. [Pixel Recurrent Neural Networks, ICML 2016](https://arxiv.org/pdf/1601.06759v2.pdf)
  * [Slides in Japanese](http://www.slideshare.net/beam2d/pixel-recurrent-neural-networks) created by Seiya Tokui
@@ -43,6 +45,10 @@ I need to spend more time to understand and think deeply about these papers.
 
 1. [RAND-WALK: A Latent Variable Model Approach to Word Embeddings, TACL 2016](https://arxiv.org/abs/1502.03520)
 * Proposes a new generative model
+
+1. [Multi-Task Cross-Lingual Sequence Tagging from Scratch, arXiv 2016](http://arxiv.org/pdf/1603.06270v2.pdf)
+* Also mentioned in [Learning Deep Generative Models @ Deep Learning Summer School](http://www.cs.toronto.edu/~rsalakhu/talk_Montreal_2016_Salakhutdinov.pdf)
+ * "Using both word-level and character-level RNNs"
 
 # Topic Models
 1. [Sparse Additive Generative Models of Text, ICML 2011](http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Eisenstein_534.pdf)
@@ -85,7 +91,7 @@ I need to spend more time to understand and think deeply about these papers.
 1. [Towards cross-lingual distributed representations without parallel text trained with adversarial autoencoders, 2016 arXiv preprint](http://arxiv.org/pdf/1608.02996v1.pdf)
 
 # Others
-1. [Generating Natural Language Descriptions for Semantic Representations of Human Brain Activity](http://aclweb.org/anthology/P/P16/P16-3004.pdf)
+1. [Generating Natural Language Descriptions for Semantic Representations of Human Brain Activity, ACL 2016](http://aclweb.org/anthology/P/P16/P16-3004.pdf)
 
 1. [Mixture Modeling of Individual Learning Curves, EDM 2015](http://www.educationaldatamining.org/EDM2015/uploads/papers/paper_133.pdf)
 
@@ -96,3 +102,4 @@ I need to spend more time to understand and think deeply about these papers.
  * Slides made by Sosuke Kobayashi
 * [karpathy's notes on Google's wikireading paper](https://github.com/karpathy/paper-notes/blob/master/wikireading.md)
 * [A Beginner's Guide to Variational Methods: Mean-Field Approximation](http://blog.evjang.com/2016/08/variational-bayes.html)
+* [How to be a successful PhD](https://people.cs.umass.edu/~wallach/how_to_be_a_successful_phd_student.pdf)
