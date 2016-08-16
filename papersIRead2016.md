@@ -93,7 +93,9 @@ I need to spend more time to understand and think deeply about these papers.
 
 1. [Cross-lingual projection for class-based language models, ACL 2016](http://www.aclweb.org/anthology/P/P16/P16-2014.pdf)
 
-1. [Towards cross-lingual distributed representations without parallel text trained with adversarial autoencoders, 2016 arXiv preprint](http://arxiv.org/pdf/1608.02996v1.pdf)
+1. [Towards cross-lingual distributed representations without parallel text trained with adversarial autoencoders, Proceedings of the 1st Workshop on Representation Learning for NLP 2016](http://aclweb.org/anthology/W/W16/W16-1614.pdf)
+ * Why adversarial autoencoders?
+ * The goal is to genrate aritificial training data that cannot discriminate between the real training data and the artificial one.
 
 # Others
 1. [Generating Natural Language Descriptions for Semantic Representations of Human Brain Activity, ACL 2016](http://aclweb.org/anthology/P/P16/P16-3004.pdf)
