@@ -59,6 +59,9 @@ I need to spend more time to understand and think deeply about these papers.
  * "Topic modeling is sensitive to preprocessing because of its dependence on a sparse vocabulary (Jockers and Mimno, 2013)"
  * LDA is in question and no other topic models are out of scope
 
+1. [Multilingual Topic Models for Unaligned Text, UAI 2009](http://www.auai.org/uai2009/papers/UAI2009_0194_e9b915894f2228eb675c97f199bebe6d.pdf)
+ * word level matching "from non-parallel but comparable corpora".
+
 # Topic Models and Word Embeddings
 1. [Nonparametric Spherical Topic Modeling with Word Embeddings, ACL 2016](http://aclweb.org/anthology/P/P16/P16-2087.pdf)
  * Cosine similarity and von Mises-Fisher distribution (Incorporates directional statistics)
@@ -84,6 +87,9 @@ I need to spend more time to understand and think deeply about these papers.
 1. [Semi-supervised Clustering for Short Text via Deep Representation Learning, CoNLL 2016](http://aclweb.org/anthology/K/K16/K16-1004.pdf) 
  * Clustering algorithms often suffer from small number of unique words in short text.
 
+1. [Bayesian Supervised Domain Adaptation for Short Text Similarity, NAACL 2016](http://www.umiacs.umd.edu/~jbg/docs/2016_naacl_sts.pdf)
+ * Multi-task learning
+
 # Interpretability
 1. [“Why Should I Trust You?” Explaining the Predictions of Any Classifier, KDD 2016](http://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf)
  * Figure 4 is a very good demonstration of the proposed method.
@@ -99,7 +105,8 @@ I need to spend more time to understand and think deeply about these papers.
 
 # Others
 1. [Generating Natural Language Descriptions for Semantic Representations of Human Brain Activity, ACL 2016](http://aclweb.org/anthology/P/P16/P16-3004.pdf)
-* "Nishida et al.(2015) demonstrated that skip-gram, employed in the framework of word2vec proposed by Mikolov (2013), is a more appropriate model than the conventional statistical models used for the quantitative analysis of semantic representation in human brain activity under the same experimental settings as the prior studies."
+ * "Nishida et al.(2015) demonstrated that skip-gram, employed in the framework of word2vec proposed by Mikolov (2013), is a more appropriate model than the conventional statistical models used for the quantitative analysis of semantic representation in human brain activity under the same experimental settings as the prior studies."
+ * Caption generation
 
 1. [Mixture Modeling of Individual Learning Curves, EDM 2015](http://www.educationaldatamining.org/EDM2015/uploads/papers/paper_133.pdf)
 
