@@ -62,6 +62,9 @@ I need to spend more time to understand and think deeply about these papers.
 1. [Multilingual Topic Models for Unaligned Text, UAI 2009](http://www.auai.org/uai2009/papers/UAI2009_0194_e9b915894f2228eb675c97f199bebe6d.pdf)
  * word level matching "from non-parallel but comparable corpora".
 
+1. [Collective supervision of topic models for predicting surveys with social media](http://cmci.colorado.edu/~mpaul/files/aaai16_collective.pdf)
+ * ``We define collective supervision as supervision in which labels are provided for groups or collections of documents''
+
 # Topic Models and Word Embeddings
 1. [Nonparametric Spherical Topic Modeling with Word Embeddings, ACL 2016](http://aclweb.org/anthology/P/P16/P16-2087.pdf)
  * Cosine similarity and von Mises-Fisher distribution (Incorporates directional statistics)
