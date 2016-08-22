@@ -14,13 +14,15 @@ See \cite{Rush_2012_tutorial} for the full tutorial.
 \section{Important Terminologies}
 \begin{enumerate}
  \item Subderivative (劣微分), subgradient (劣勾配)
- \item belief propagation (BP)
+ \item Belief propagation (BP)
+ \item Lagrange Relaxation
 \end{enumerate}
 
 \section{Main Points}
 \begin{enumerate}
  \item Typically simple and efficient \cite{Rush_2012_tutorial}.
  \item Many decoding problems can be decomposed into two or more subproblems \cite{Rush_2012_tutorial}.
+ \item ``Dual decomposition [...] is a special case of Lagrangian relaxation (LR).'' \cite{Rush_2012_tutorial}
 \end{enumerate}
 
 \begin{equation*}
@@ -34,6 +36,11 @@ See \cite{Rush_2012_tutorial} for the full tutorial.
 
 \section{Dual Decomposition for Parsing}
 Cherry-picking importnat points from \cite{Rush_2012_tutorial}.
+
+\section{Why is dual composition/Lagrange relaxation important?}
+\begin{enumerate}
+ \item Able to include global features rather than local features (e.g., like what Viterbi algorithm does) during the decoding step \cite{pfi_dual_decomposition}. 
+\end{enumerate}
 
 \bibliographystyle{plain}
 \bibliography{yoshinari_notes_dd}
