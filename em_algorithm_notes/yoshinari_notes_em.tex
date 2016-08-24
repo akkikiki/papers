@@ -22,9 +22,15 @@ $$\log P(\theta) + \log P(D)$$
 $$q_{w,c} = P(W = w | C = c)$$
 \end{enumerate}
 
+\section{Chain Rule}
+$$
+P(A, B, C) = P(A) \frac{P(A, B)}{P(A)} \frac{P(A, B, C)}{P(A, B)} = P(A)P(B|A)P(C|A,B)
+$$
 
-\section{Naive Bayes}
-Naive Bayes models 
+\section{Naive Bayes Models}
+Features of the data (in this case, words) are conditionally independent of given the class $c$.
+
+e.g., ``peanut butter'' from a class ``food'' is probably not conditinally independent \cite{naive_bayes_lecture}.
 
 $C$: a class of document e.g. positive/negative
 

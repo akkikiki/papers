@@ -64,6 +64,10 @@ I need to spend more time to understand and think deeply about these papers.
 
 1. [Collective supervision of topic models for predicting surveys with social media](http://cmci.colorado.edu/~mpaul/files/aaai16_collective.pdf)
  * ``We define collective supervision as supervision in which labels are provided for groups or collections of documents''
+ * What does it mean by ``adaptive'' version?
+ * Upstream supervision: ``supervision influences the priors over topic distributions in documents''
+ * assuming a lack of observed values in data (adaptive version).
+ * ``SPRITE (Paul and Dredze 2015), which extends DMR to use log-linear priors in various ways''
 
 # Topic Models and Word Embeddings
 1. [Nonparametric Spherical Topic Modeling with Word Embeddings, ACL 2016](http://aclweb.org/anthology/P/P16/P16-2087.pdf)
@@ -72,7 +76,7 @@ I need to spend more time to understand and think deeply about these papers.
 2. [A Latent Concept Topic Model for Robust Topic Inference Using Word Embeddings](http://aclweb.org/anthology/P/P16/P16-2062.pdf)
 
 # Curriculum Learning
-1. [Learning the Curriculum with Bayesian Optimization for Task-Specific Word Representation Learning](http://aclweb.org/anthology/P/P16/P16-1013.pdf)
+1. [Learning the Curriculum with Bayesian Optimization for Task-Specific Word Representation Learning, ACL 2016](http://aclweb.org/anthology/P/P16/P16-1013.pdf)
  * curriculum learning
  * How do you define a “complexity” of training data?
      * length of training sentences for grammar induction ([Spitkovsky et al., NAACL 2010](http://www.aclweb.org/anthology/N/N10/N10-1116.pdf))
@@ -95,7 +99,9 @@ I need to spend more time to understand and think deeply about these papers.
 
 # Interpretability
 1. [“Why Should I Trust You?” Explaining the Predictions of Any Classifier, KDD 2016](http://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf)
+ * [video on YouTube](https://www.youtube.com/watch?v=hUnRCxnydCc)
  * Figure 4 is a very good demonstration of the proposed method.
+ 
 
 # Cross-lingual projection
 1. [Learning when to trust distant supervision: An application to low-resource POS tagging using cross-lingual projection, CoNLL 2016](http://aclweb.org/anthology/K/K16/K16-1018.pdf)
@@ -122,3 +128,4 @@ I need to spend more time to understand and think deeply about these papers.
 * [A Beginner's Guide to Variational Methods: Mean-Field Approximation](http://blog.evjang.com/2016/08/variational-bayes.html)
 * [How to be a successful PhD](https://people.cs.umass.edu/~wallach/how_to_be_a_successful_phd_student.pdf)
 * [Hal's blog post about ACL 2016](http://nlpers.blogspot.com/2016/08/some-papers-i-liked-at-acl-2016.html)
+* [NLP Programming Tutorial 7 - Topic Model (In Japanese)](http://www.phontron.com/slides/nlp-programming-ja-07-topic.pdf)
