@@ -100,6 +100,7 @@ I need to spend more time to understand and think deeply about these papers.
 # Interpretability
 1. [“Why Should I Trust You?” Explaining the Predictions of Any Classifier, KDD 2016](http://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf)
  * [video on YouTube](https://www.youtube.com/watch?v=hUnRCxnydCc)
+ * [video of explanation by Marco](https://www.youtube.com/watch?v=bCgEP2zuYxI)
  * Figure 4 is a very good demonstration of the proposed method.
  
 
@@ -129,3 +130,4 @@ I need to spend more time to understand and think deeply about these papers.
 * [How to be a successful PhD](https://people.cs.umass.edu/~wallach/how_to_be_a_successful_phd_student.pdf)
 * [Hal's blog post about ACL 2016](http://nlpers.blogspot.com/2016/08/some-papers-i-liked-at-acl-2016.html)
 * [NLP Programming Tutorial 7 - Topic Model (In Japanese)](http://www.phontron.com/slides/nlp-programming-ja-07-topic.pdf)
+* [Prof. Michael J. Paul's presentation @ CHI](https://www.youtube.com/watch?v=uKk7IFxDeOo)
