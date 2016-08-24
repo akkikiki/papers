@@ -24,6 +24,11 @@ I need to spend more time to understand and think deeply about these papers.
 
 1. [Generating Images from Captions with Attention, ICLR 2016](https://arxiv.org/pdf/1511.02793v2.pdf)
 
+1. [A Deep Learning Approach to Machine Transliteration, WMT 2009](http://www.statmt.org/wmt09/pdf//WMT-0938.pdf)
+ * Deep belief network (multiple layers of Restricted Boltzmann machine)
+ * Creation of n-best lists seems interesting (Using Gibbs sampling)
+ * As mentioned in Section 3.3, robustness on reversed inputs is an interesting property.
+
 # Autoencoders
 1. [Pixel Recurrent Neural Networks, ICML 2016](https://arxiv.org/pdf/1601.06759v2.pdf)
  * [Slides in Japanese](http://www.slideshare.net/beam2d/pixel-recurrent-neural-networks) created by Seiya Tokui
