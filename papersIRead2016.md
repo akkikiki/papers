@@ -25,7 +25,8 @@ I need to spend more time to understand and think deeply about these papers.
 1. [Generating Images from Captions with Attention, ICLR 2016](https://arxiv.org/pdf/1511.02793v2.pdf)
 
 1. [A Deep Learning Approach to Machine Transliteration, WMT 2009](http://www.statmt.org/wmt09/pdf//WMT-0938.pdf)
- * Deep belief network (multiple layers of Restricted Boltzmann machine)
+ * Deep belief network (multiple layers of Restricted Boltzmann machine (RBM))
+  * The input vectors are binarized probably because it uses RBM
  * Creation of n-best lists seems interesting (Using Gibbs sampling)
  * As mentioned in Section 3.3, robustness on reversed inputs is an interesting property.
 
@@ -73,6 +74,13 @@ I need to spend more time to understand and think deeply about these papers.
  * Upstream supervision: ``supervision influences the priors over topic distributions in documents''
  * assuming a lack of observed values in data (adaptive version).
  * ``SPRITE (Paul and Dredze 2015), which extends DMR to use log-linear priors in various ways''
+
+1. [Replicated Softmax: an Undirected Topic Model, NIPS 2009](http://papers.nips.cc/paper/3856-replicated-softmax-an-undirected-topic-model.pdf)
+ * According to [A Neural Autoregressive Topic Model, NIPS 2012](http://www.dmi.usherb.ca/~larocheh/publications/nips_2012_camera_ready.pdf), "The Replicated Softmax is in fact a generalization of the restricted Boltzmann machine (RBM)."
+ * Repliecated Softmax "relies on a binary distributed representation of the documents."
+ * 2012 paper also mentions about SAGE too. "Training in SAGE scales linearly with vocabulary size"
+
+1. [https://www.cs.toronto.edu/~hinton/absps/deepBMdocs.pdf, UAI 2014](https://www.cs.toronto.edu/~hinton/absps/deepBMdocs.pdf)
 
 # Topic Models and Word Embeddings
 1. [Nonparametric Spherical Topic Modeling with Word Embeddings, ACL 2016](http://aclweb.org/anthology/P/P16/P16-2087.pdf)
@@ -136,3 +144,4 @@ I need to spend more time to understand and think deeply about these papers.
 * [Hal's blog post about ACL 2016](http://nlpers.blogspot.com/2016/08/some-papers-i-liked-at-acl-2016.html)
 * [NLP Programming Tutorial 7 - Topic Model (In Japanese)](http://www.phontron.com/slides/nlp-programming-ja-07-topic.pdf)
 * [Prof. Michael J. Paul's presentation @ CHI](https://www.youtube.com/watch?v=uKk7IFxDeOo)
+* [Deep Learning Summer School, Montreal 2016](http://videolectures.net/deeplearning2016_montreal/)
