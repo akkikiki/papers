@@ -68,7 +68,7 @@ I need to spend more time to understand and think deeply about these papers.
 1. [Multilingual Topic Models for Unaligned Text, UAI 2009](http://www.auai.org/uai2009/papers/UAI2009_0194_e9b915894f2228eb675c97f199bebe6d.pdf)
  * word level matching "from non-parallel but comparable corpora".
 
-1. [Collective supervision of topic models for predicting surveys with social media](http://cmci.colorado.edu/~mpaul/files/aaai16_collective.pdf)
+1. [Collective supervision of topic models for predicting surveys with social media, AAAI 2016](http://cmci.colorado.edu/~mpaul/files/aaai16_collective.pdf)
  * ``We define collective supervision as supervision in which labels are provided for groups or collections of documents''
  * What does it mean by ``adaptive'' version?
  * Upstream supervision: ``supervision influences the priors over topic distributions in documents''
@@ -102,6 +102,9 @@ I need to spend more time to understand and think deeply about these papers.
 
 1. [From Baby Steps to Leapfrog: How “Less is More” in Unsupervised Dependency Parsing, NAACL 2010](http://www.aclweb.org/anthology/N/N10/N10-1116.pdf)
 
+1. [Survey slides of curriculum learning (In Japanese)](http://www.slideshare.net/YoshitakaUshiku/20150530-kantocv-curriculumlearning)
+
+1. [Self-Paced Learning for Latent Variable Models, NIPS 2010](http://ai.stanford.edu/~pawan/publications/KPK-NIPS2010.pdf)
 
 # Short texts
 1. [Semi-supervised Clustering for Short Text via Deep Representation Learning, CoNLL 2016](http://aclweb.org/anthology/K/K16/K16-1004.pdf) 
