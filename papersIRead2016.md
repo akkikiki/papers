@@ -136,6 +136,13 @@ I need to spend more time to understand and think deeply about these papers.
 
 1. [Mixture Modeling of Individual Learning Curves, EDM 2015](http://www.educationaldatamining.org/EDM2015/uploads/papers/paper_133.pdf)
 
+# Future Readings
+1. [A Primer on Neural Network Models for Natural Language Processing](https://arxiv.org/pdf/1510.00726.pdf)
+1. [Polylingual Tree-Based Topic Models for Translation Domain Adaptation, ACL 2014](http://www.cs.colorado.edu/~jbg/docs/2014_acl_ptlda_mt.pdf)
+1. [Speeding Document Annotation with Topic Models, NAACL SRW 2015](http://www.aclweb.org/anthology/N15-2017)
+1. [Visualizing topic models, AAAI 2012](http://www.cs.columbia.edu/~blei/papers/ChaneyBlei2012.pdf)
+1. [Variational Inference: A Review for Statisticians, David Blei et al.](http://arxiv.org/pdf/1601.00670v3.pdf)
+
 # Websites/Blogs/Survey Slides
 * [2016 Paper Selection](http://anie.me/paper-compose-2016/)
 * [Arxiv Sanity Preserver](http://www.arxiv-sanity.com/)
