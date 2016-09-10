@@ -1,0 +1,38 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsbsy}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{amssymb}
+\usepackage{url}
+
+\newcommand{\argmax}{\mathop{\rm arg~max}\limits}
+
+\begin{document}
+
+\section{Summary}
+
+This is a note for \cite{eisenstein2011sparse}.
+Let's start from Naive Bayes classifier.
+$$
+P(word = w|class = k) = \frac{\exp(\eta_{kw})}{\sum_v \exp(\eta_{kv})}
+$$
+
+The important part is $\eta_{kw} \in \mathbb{R}$. Traditionally, there are many approaches directly modeling the probability by $p$; however, the probability has the limitation that 1) $1 \geq p \geq 0$ and 2) $\int_{\Omega} p = 1$. This technique is called ``natural parameterization'' denoted as $\eta = \log(p) + c$ where $c$ is a constant value.
+Also note that log-linear models are easy to take the derivatives.
+
+
+
+$$
+P(w|y_d, m, \eta) = \frac{\exp(m + \eta_{y_d})}{\sum_i (m_i + n_{y_d, i})}
+$$
+
+Now, the prior is no longer limited to Dirichlet distribution. For example, a prior can be a Gaussian distribution $\bm{\eta} \sim N(0, \Sigma)$ where $\Sigma$ can encode the similarity between words.
+
+Sparsity also encourages interpretability because we can now focus on fewer parameters (or words).
+
+\bibliographystyle{plain}
+\bibliography{yoshinari_notes_sage}
+
+\end{document}
+
