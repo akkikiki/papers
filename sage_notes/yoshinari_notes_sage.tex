@@ -18,8 +18,9 @@ $$
 P(word = w|class = k) = \frac{\exp(\eta_{kw})}{\sum_v \exp(\eta_{kv})}
 $$
 
-The important part is $\eta_{kw} \in \mathbb{R}$. Traditionally, there are many approaches directly modeling the probability by $p$; however, the probability has the limitation that 1) $1 \geq p \geq 0$ and 2) $\int_{\Omega} p = 1$. This technique is called ``natural parameterization'' denoted as $\eta = \log(p) + c$ where $c$ is a constant value.
+The important part is $\eta_{kw} \in \mathbb{R}$, which allows $\eta_{kw}$ to take negative values too. If we directly model the probability $p_{kw} = \frac{\# \text{ word $w$ in class } k}{\# \text{ words in class } k}$, then it has the limitation that 1) $1 \geq p_{kw} \geq 0$ and 2) $\int_{\Omega} p_{kw} = 1$. This technique is called ``natural parameterization'' denoted as $\eta_{kw} = \log(p_{kw}) + c$ where $c$ is a constant value.
 Also note that log-linear models are easy to take the derivatives.
+%TODO: What is the resulting formula for taking the derivative?
 
 
 
@@ -29,7 +30,7 @@ $$
 
 Now, the prior is no longer limited to Dirichlet distribution. For example, a prior can be a Gaussian distribution $\bm{\eta} \sim N(0, \Sigma)$ where $\Sigma$ can encode the similarity between words.
 
-In the SAGE paper \cite{eisenstein2011sparse}, Laplace prior or double exponential distribution (also see the graph at \cite{place_prior}) is used to produce sparsity. 
+In the SAGE paper \cite{eisenstein2011sparse}, Laplace prior or double exponential distribution (also see the graph at \cite{laplace_prior}) is used to produce sparsity. 
 Sparsity also encourages interpretability because we can now focus on fewer parameters (or words).
 
 \bibliographystyle{plain}
