@@ -18,7 +18,7 @@ $$
 P(word = w|class = k) = \frac{\exp(\eta_{kw})}{\sum_v \exp(\eta_{kv})}
 $$
 
-The important part is $\eta_{kw} \in \mathbb{R}$, which allows $\eta_{kw}$ to take negative values too. If we directly model the probability $p_{kw} = \frac{\# \text{ word $w$ in class } k}{\# \text{ words in class } k}$, then it has the limitation that 1) $1 \geq p_{kw} \geq 0$ and 2) $\int_{\Omega} p_{kw} = 1$. This technique is called ``natural parameterization'' denoted as $\eta_{kw} = \log(p_{kw}) + c$ where $c$ is a constant value.
+The important part is $\eta_{kw} \in \mathbb{R}$, which allows $\eta_{kw}$ to take negative values too. If we directly model the probability $p_{kw} = \frac{\# \text{ word $w$ in class } k}{\# \text{ words in class } k}$, then it has the limitation that 1) $1 \geq p_{kw} \geq 0$ and 2) $\int_{\Omega} p_{kw} = 1$. This technique is called ``natural parameterization'', which is denoted as $\eta_{kw} = \log(p_{kw}) + c$ where $c$ is a constant value.
 Also note that log-linear models are easy when because the log transformation makes the objective function as a sum and it is easy to take the derivatives when compared to a product.
 %TODO: What is the resulting formula for taking the derivative?
 

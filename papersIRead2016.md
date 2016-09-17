@@ -59,6 +59,7 @@ I need to spend more time to understand and think deeply about these papers.
 # Topic Models
 1. [Sparse Additive Generative Models of Text, ICML 2011](http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Eisenstein_534.pdf)
  * Require less variables. (E.g. switching variables in topic-perspective models in Ahmed & Xing 2010)
+ * [Japanese slides by syou6162](http://www.slideshare.net/tsubosaka/icml2011-readingsage)
 
 1. [Comparing Apples to Apple: The Effects of Stemmers on Topic Models, TACL 2016](http://aclweb.org/anthology/Q/Q16/Q16-1021.pdf)
  * rule-based stemmers and context-based methods
