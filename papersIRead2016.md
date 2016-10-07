@@ -75,6 +75,7 @@ I need to spend more time to understand and think deeply about these papers.
  * Upstream supervision: ``supervision influences the priors over topic distributions in documents''
  * assuming a lack of observed values in data (adaptive version).
  * ``SPRITE (Paul and Dredze 2015), which extends DMR to use log-linear priors in various ways''
+  * Dirichlet-Multinomial Regression (DMR)
 
 1. [Replicated Softmax: an Undirected Topic Model, NIPS 2009](http://papers.nips.cc/paper/3856-replicated-softmax-an-undirected-topic-model.pdf)
  * According to [A Neural Autoregressive Topic Model, NIPS 2012](http://www.dmi.usherb.ca/~larocheh/publications/nips_2012_camera_ready.pdf), "The Replicated Softmax is in fact a generalization of the restricted Boltzmann machine (RBM)."
