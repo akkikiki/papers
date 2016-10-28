@@ -1,0 +1,29 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsbsy}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{amssymb}
+\usepackage{url}
+
+\newcommand{\argmax}{\mathop{\rm arg~max}\limits}
+
+\begin{document}
+
+\section{Preliminaries}
+$\Sigma_{ij} = cov(X_i, X_j) = E[(X_i - \mu_i)(X_j - \mu_j)]$, where $E(X_i) = \mu_i$ CITEME: Wikipedia
+
+\section{Summary}
+Let $X_1, X_2 \in \mathbb{R}^n$ be two arbitrary vectors with covariance matrices $\Sigma_{X_1X_1}, \Sigma_{X_2X_2}$ and cross-covariance $\Sigma_{X_1X_2}$ \cite{galen2013-deep-cca}. 
+
+Canonical correlation analysis (CCA) tries to find linear projection vectors $w_1$ and $w_2$ that maximizes correlation $\rho = \mbox{correlation}(w_1^TX_1, w_2^TX_2)$ i.e. \cite{cca_tutorial}:
+$$
+\rho = \frac{w_1^{T} \Sigma_{X_1X_2} w_2}{\sqrt{w_1^T \Sigma_{X_1X_1} w_1} \sqrt{w_2^T \Sigma_{X_2X_2} w_2} }
+$$
+(One thing to note that is some papers like \cite{galen2013-deep-cca} denote transpose as '.)
+
+\bibliographystyle{plain}
+\bibliography{yoshinari_notes_cca}
+
+\end{document}
+
