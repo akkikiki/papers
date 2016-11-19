@@ -1,0 +1,95 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsbsy}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{amssymb}
+\usepackage{url}
+
+\newcommand{\argmax}{\mathop{\rm arg~max}\limits}
+\newcommand{\argmin}{\mathop{\rm arg~min}\limits}
+
+\begin{document}
+
+\section{Summary}
+Let's start from linear regression with L2 regularization \cite{l2reg}.
+$$
+\bm{y} = \bm{w}^T \phi(\bm{x})
+$$
+Note that $\phi(\bm{x}) = X$ where $X$ is a $m \times D$ matrix where each training sample has $m$ features.
+
+To choose the optimal $\bm{w}$, we minimize the sum of squares:
+
+$$
+\bm{w}^* = \argmin_{\bm{w}} ||\bm{y} - \bm{w}^T \phi(\bm{x})||^2
+$$
+
+To avoid overfitting, we add the regularization parameter: 
+$$
+\bm{w}^* = \argmin_{\bm{w}} ||\bm{y} - \bm{w}^T \phi(\bm{x})||^2 + \lambda ||\bm{w}||^2
+$$
+
+Lets say that $L(\bm{w}) = ||\bm{y} - \bm{w}^T \phi(\bm{x})||^2 + \lambda ||\bm{w}||^2$
+
+
+
+
+% + \lambda ||\bm{w}||^2
+
+What is this derivative? We will compute the following gradient:
+$$
+\nabla_{\bm{w}} L(\bm{w}) = \frac{\partial L(\bm{w})}{\partial \bm{w}} =  (\frac{\partial L(\bm{w})}{\partial w_1}, ..., \frac{\partial L(\bm{w})}{\partial w_i})
+$$
+
+Let's go look into one element of this gradient $\nabla_{\bm{w}}$:
+
+$$
+\frac{\partial L(\bm{w})}{\partial w_i}
+ = \frac{\partial (||\bm{y} - \bm{w}^T \phi(\bm{x})||^2 + \lambda ||\bm{w}||^2)}{\partial w_i} \\
+$$
+
+Keep in mind that 
+\begin{align}
+||\bm{y} - X\bm{w}||^2 
+&= \bm{y}^T \bm{y} - \bm{y}^T X\bm{w} - (X\bm{w})^T \bm{y} + (X\bm{w})^T(X\bm{w}) \\
+&= \bm{y}^T \bm{y} - 2 \bm{y}^T X\bm{w} + (X\bm{w})^T(X\bm{w}) \\
+&= \sum_i y_i^2 - 2 \bm{y}^T X\bm{w} + \sum_j (\bm{x}_j \bm{w})^2 \\
+&= \sum_i y_i^2 - 2 \sum_i a_i w_i + \sum_j (\sum_i x_{ji} w_i)^2 \\
+&= \sum_i y_i^2 - 2 \sum_i a_i w_i + \sum_j (x_{j1} w_1 + ... + x_{ji} w_i )^2
+\end{align}
+where $\bm{a} = \bm{y}^T X$, $a_i = \bm{y}^T X_i$
+
+Since $\forall k$ s.t. $k \neq i, \frac{\partial w_k}{\partial w_i} = 0$, 
+
+\begin{align}
+\frac{\partial L(\bm{w})}{\partial w_i} 
+&= -2 a_i - \frac{\partial \sum_j ( (x_{ji} w_i) (x_{j1} w_1 + ... + x_{j{i-1}} w_{i-1} ) + (x_{j1} w_1 + ... + x_{j{i-1}} w_{i-1} )(x_{ji} w_i) + (x_{ji} w_i)^2 )}{\partial w_i} \\
+&= -2 a_i - \sum_j ((x_{ji}) (x_{j1} w_1 + ... + x_{j{i-1}} w_{i-1} ) + (x_{j1} w_1 + ... + x_{j{i-1}} w_{i-1} )  (x_{ji}) + (2 x_{ji}^2 w_i)) \\
+&= -2 a_i - \sum_j 2 ((x_{ji}) (x_{j1} w_1 + ... + x_{j{i-1}} w_{i-1} ) + (2 x_{ji}^2 w_i)) \\
+&= -2 ( a_i  - \sum_j ((x_{ji}) (x_{j1} w_1 + ... + x_{j{i-1}} w_{i-1} ) + ( x_{ji}^2 w_i))) \\
+&= -2 ( a_i  - \sum_j ((x_{ji}) (x_{j1} w_1 + ... + x_{j{i-1}} w_{i-1} + x_{ji}w_i))) \\
+&= -2 ( a_i  - \sum_j ((x_{ji}) (x_{j1}, ... ,x_{j{i-1}}, x_{ji}) \bm{w}) \\
+&= -2 (\bm{y}^T X_i - X_j^T X_i \bm{w})
+\end{align}
+
+In the matrix representation:
+$$
+\nabla_{\bm{w}} L(\bm{w}) = -2(\bm{y}^TX - X^TXw)
+$$
+
+Also in general:
+$$
+\nabla_{\bm{w}} w^T X^T X w  = 2X^TXw
+$$
+
+Note that $X^T X$ is symmetric and it is part of the common matrix derivative pattern\footnote{\url{https://en.wikipedia.org/wiki/Matrix_calculus#Scalar-by-vector_identities}}
+
+
+
+
+
+\bibliographystyle{plain}
+\bibliography{yoshinari_notes_vec_derivative}
+
+\end{document}
+
