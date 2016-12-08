@@ -21,6 +21,7 @@ The important components are as follows:
  \item Morphological priors
  \item Latent word embedding $b_w$.
  \item Morpheme emebedding $u_m$.
+ \item Variational distribution $Q(b)$
 \end{enumerate}
 
 \section{Latent Word Embedding and Morpheme Embedding}
@@ -33,6 +34,11 @@ When inferring $P(x)$, we will have to infer $P(b)$ too since $P(b)$ appears in 
 
 $$
 b_{w,i} \sim Bernouli(sigmoid(\sum_{m \in M_w} u_{m,i}))
+$$
+i.e. for outcomes or the range of a probabilistic variable $b_{w,i}$ is either $0$ or $1$,
+
+$$
+P(b_{w,i}) = sigmoid(\sum_{m \in M_w} u_{m,i})^{b_{w,i}} (1 - sigmoid(\sum_{m \in M_w} u_{m,i}))^{1 - b_{w,i}}
 $$
 
 So let's look into an example. 
@@ -56,7 +62,34 @@ The hidden state at time $h_t$ (vector) is
 $$
 h_t = sigmoid(\Theta h_{t-1} + b_{x_t})
 $$
-where $x_t$ is the word corresponding to the position $t$.
+where $x_t$ is the word corresponding to the position $t$, and $\Theta$ is the parameter for the recurrence function (recurrent weights\footnote{\url{http://peterroelants.github.io/posts/rnn_implementation_part01/}}).
+
+\section{What is going on inside $D_{KL}(Q(b)||P(b))$?}
+
+$$
+D_{KL}(q(b_{w,i}) || P(b_{w,i})) = q(b_{w,i}) \log(\frac{q(b_{w,i})}{P(b_{w,i})})
+$$
+
+$$
+= q(b_{w,i}) (\log(q(b_{w,i})) - \log(P(b_{w,i}))
+$$
+
+$$
+= q(b_{w,i}) (\log(q(b_{w,i})) - b_{w,i} \log(sigmoid(\sum_{m \in M_w} u_{m,i})) - (1 - b_{w,i}) \log(1 - sigmoid(\sum_{m \in M_w} u_{m,i})))
+$$
+
+
+$$
+q(b_{w,i};\gamma_{w,i}) = \gamma_{w,i}^{b_{w,i}} (1 - \gamma_{w,i})^{1 - b_{w,i}}
+$$
+
+$$
+ \log(q(b_{w,i};\gamma_{w,i})) = b_{w,i}\gamma_{w,i} + (1 - b_{w,i})(1 - \gamma_{w,i})
+$$
+
+
+
+
 
 \bibliographystyle{plain}
 \bibliography{yoshinari_notes_prob_neural_word_embed}
