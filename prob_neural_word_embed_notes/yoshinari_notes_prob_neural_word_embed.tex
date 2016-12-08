@@ -23,10 +23,40 @@ The important components are as follows:
  \item Morpheme emebedding $u_m$.
 \end{enumerate}
 
+\section{Latent Word Embedding and Morpheme Embedding}
+Each morpheme is segmented in unsupervised fashion according to Morfessor. For example, $u_{-ism} = (-0.24, 5, -111)$.
+
+When inferring $P(x)$, we will have to infer $P(b)$ too since $P(b)$ appears in the lower variational bound.
+
+% Aditiya: You have to write it out. There is no other way or other shortcuts.
+
 
 $$
-Bernouli()
+b_{w,i} \sim Bernouli(sigmoid(\sum_{m \in M_w} u_{m,i}))
 $$
+
+So let's look into an example. 
+Let $M = {perfection, -ism}$
+$u_{perfection} = (0, -1.1, 1)$ 
+
+$u_{-ism} = (2, 5.1, 3)$ 
+
+When $w = perfectionism$, then
+
+$b_{w,0} \sim Bernoulli(sigmoid(0 + 2)) \approx 0.88$
+
+$b_{w,1} \sim Bernoulli(sigmoid(-1.1 + 5.1)) \approx 0.98$
+
+$b_{w,2} \sim Bernoulli(sigmoid(1 + 3)) \approx 0.98$
+
+So $P(b_w = (1, 1, 1)) = 0.88 * 0.98 * 0.98 \approx 0.84$.
+
+\section{Hidden state}
+The hidden state at time $h_t$ (vector) is
+$$
+h_t = sigmoid(\Theta h_{t-1} + b_{x_t})
+$$
+where $x_t$ is the word corresponding to the position $t$.
 
 \bibliographystyle{plain}
 \bibliography{yoshinari_notes_prob_neural_word_embed}
