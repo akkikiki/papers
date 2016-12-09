@@ -75,19 +75,56 @@ $$
 $$
 
 $$
-= q(b_{w,i}) (\log(q(b_{w,i})) - b_{w,i} \log(sigmoid(\sum_{m \in M_w} u_{m,i})) - (1 - b_{w,i}) \log(1 - sigmoid(\sum_{m \in M_w} u_{m,i})))
+= E_q [\log(q(b_{w,i}))] - E_q[\log(P(b_{w,i}))]
+$$
+
+
+
+%$$
+%= q(b_{w,i}) (\log(q(b_{w,i})) - b_{w,i} \log(sigmoid(\sum_{m \in M_w} u_{m,i})) - (1 - b_{w,i}) \log(1 - sigmoid(\sum_{m \in M_w} u_{m,i})))
+%$$
+%
+%
+%$$
+%q(b_{w,i};\gamma_{w,i}) = \gamma_{w,i}^{b_{w,i}} (1 - \gamma_{w,i})^{1 - b_{w,i}}
+%$$
+%
+%$$
+% \log(q(b_{w,i};\gamma_{w,i})) = b_{w,i}\log(\gamma_{w,i}) + (1 - b_{w,i})\log(1 - \gamma_{w,i})
+%$$
+
+$$
+ E_q[\log(q(b_{w,i};\gamma_{w,i}))] = q(b_{w,i} = 1) * \log(\gamma_{w,i}) + q(b_{w,i} = 0) * \log(1 - \gamma_{w,i})
+$$
+
+$$
+=  \gamma_{w,i} * \log(\gamma_{w,i}) + (1 - \gamma_{w,i}) * \log(1 - \gamma_{w,i})
+$$
+
+
+
+$$
+E_q[\log P(b_{w,i})] = q(b_{w,i} = 1) * \log(sigmoid(\sum_{m \in M_w} u_{m,i})) + q(b_{w,i} = 0) * \log((1 - sigmoid(\sum_{m \in M_w} u_{m,i})))
 $$
 
 
 $$
-q(b_{w,i};\gamma_{w,i}) = \gamma_{w,i}^{b_{w,i}} (1 - \gamma_{w,i})^{1 - b_{w,i}}
-$$
-
-$$
- \log(q(b_{w,i};\gamma_{w,i})) = b_{w,i}\log(\gamma_{w,i}) + (1 - b_{w,i})\log(1 - \gamma_{w,i})
+= \gamma_{w,i} * \log(sigmoid(\sum_{m \in M_w} u_{m,i})) + (1 - \gamma_{w,i}) * \log((1 - sigmoid(\sum_{m \in M_w} u_{m,i})))
 $$
 
 
+Note that `morpho\_level\_reps = (self.morpho\_embed\_lookup.apply(morpho\_idxs) * masks).sum(axis=2)` reprepresnts $\sum_{m \in M_w} u_{m,i}$
+
+
+$$
+1 - sigmoid(x) = \frac{1 + e^{-x}}{1 + e^{-x}} - \frac{1}{1 + e^{-x}} = \frac{e^{-x}}{1 + e^{-x}}
+$$
+$$
+= \frac{1}{e^{x} + 1}
+$$
+$$
+ \log(1 - sigmoid(x))= \log(\frac{1}{e^{x} + 1}) = -\log(e^{x} + 1)
+$$
 
 
 
